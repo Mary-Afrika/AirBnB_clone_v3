@@ -9,6 +9,7 @@ def get_status():
     """return status"""
     return {"status": "OK"}
 
+
 @app_views.route('/stats', strict_slashes=False)
 def get_stats():
     """get stats count"""
