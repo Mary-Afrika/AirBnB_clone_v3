@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# this checks for pycodestyle errors in probably all files
+
+#pycodestyle *.py
+pycodestyle models/*.py
+pycodestyle models/engine/*.py
+pycodestyle api/v1/*.py
+pycodestyle api/v1/views/*.py
+pycodestyle tests/*.py
+pycodestyle tests/test_models/*.py
+pycodestyle tests/test_models/test_engine/*.py
+#pycodestyle web_flask/*.py
