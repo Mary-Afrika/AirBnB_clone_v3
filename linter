@@ -9,4 +9,13 @@ pycodestyle api/v1/views/*.py
 pycodestyle tests/*.py
 pycodestyle tests/test_models/*.py
 pycodestyle tests/test_models/test_engine/*.py
+
+pylint --disable=all --enable=missing-docstring models/*.py
+pylint --disable=all --enable=missing-docstring models/engine/*.py
+pylint --disable=all --enable=missing-docstring api/v1/*.py
+pylint --disable=all --enable=missing-docstring api/v1/views/*.py
+pylint --disable=all --enable=missing-docstring tests/*.py
+pylint --disable=all --enable=missing-docstring tests/test_models/*.py
+pylint --disable=all --enable=missing-docstring tests/test_models/test_engine/*.py
+
 #pycodestyle web_flask/*.py
