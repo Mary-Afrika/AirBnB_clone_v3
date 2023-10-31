@@ -71,7 +71,7 @@ class FileStorage:
 
     def get(self, cls, id):
         """ retrieves """
-        if cls in classes.keys() and id and type(id) == str:
+        if (cls in classes.values() or cls in classes.keys()) and id and type(id) == str:
             d_obj = self.all(cls)
             for key, value in d_obj.items():
                 if key.split(".")[1] == id:
