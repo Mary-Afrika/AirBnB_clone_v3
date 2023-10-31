@@ -5,6 +5,7 @@ from flask import Flask, jsonify, make_response
 from models import storage
 from api.v1.views import app_views
 from os import getenv
+from flask_cors import CORS
 
 
 app = Flask(__name__)
@@ -31,4 +32,5 @@ if __name__ == "__main__":
         host = '0.0.0.0'
     if not port:
         port = '5000'
+    CORS(app, resources={'/*': {'origins': host}})
     app.run(host=host, port=port, threaded=True)

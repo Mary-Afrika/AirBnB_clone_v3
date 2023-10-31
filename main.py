@@ -4,6 +4,7 @@
 from importlib import import_module
 import sys
 
+print(sys.argv[1])
 m_imported = import_module(sys.argv[1])
 
 if m_imported.__doc__ is None:
